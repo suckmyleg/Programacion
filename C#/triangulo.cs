@@ -10,10 +10,13 @@ class Triangulo{
 			if (max_base%2!=0)
 			{
 				int altura = (max_base/2)+1;
-				for (int i = 0; i < altura; i++)
+				for (int y = 0; y < altura; y++)
 				{
-					for(int a = 0; a < altura-(i+1); a++) Console.Write(" ");
-					for(int b = 0; b <= i*2; b++) Console.Write("*");
+					for(int x = 0; x<max_base; x++)
+					{
+						if (x <= (max_base/2)+y && x >= (max_base/2)-y) Console.Write("*");
+						else Console.Write(" ");
+					}
 					Console.Write("\n");
 				}
 			}
